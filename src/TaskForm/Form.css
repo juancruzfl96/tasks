@@ -1,0 +1,33 @@
+.Form {
+	height: 70%;
+	text-align: center;
+}
+
+textarea {
+	width: 40vw;
+	height: 60%;
+	font-size: 15px;
+	color: black;
+}
+
+.Button {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-around;
+	height: 10%;
+}
+
+button {
+	width: 125px;
+	font-size: 20px;
+}
+
+.Cancel:hover {
+	background-color: #ff0e0e;
+	border: none;
+}
+
+.Add:hover {
+	background-color: #0eff0f;
+	border: none;
+}
