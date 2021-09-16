@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 } from 'uuid';
 import { TaskContext } from '../TaskContext';
 import './Form.css';
 
@@ -17,7 +18,7 @@ function TaskForm() {
 
 	const onSubmit = (event) => {
 		event.preventDefault();
-		addTask(newTaskValue);
+		addTask(newTaskValue, v4());
 		setOpenModal(false);
 	};
 
@@ -26,7 +27,7 @@ function TaskForm() {
 			<textarea
 				value={newTaskValue}
 				onChange={onChange}
-				placeholder='Sacar a pasear al perro'
+				placeholder='Write your new task'
 			/>
 			<div className='Button'>
 				<button className='Cancel' type='button' onClick={onCancel}>

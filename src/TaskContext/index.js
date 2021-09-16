@@ -28,24 +28,27 @@ function TaskProvider(props) {
 		});
 	}
 
-	const addTask = (text) => {
+	const addTask = (text, id) => {
 		const newTasks = [...tasks];
 		newTasks.push({
 			completed: false,
 			text,
+			id,
 		});
 		saveTasks(newTasks);
 	};
 
-	const completeTask = (text) => {
-		const taskIndex = tasks.findIndex((task) => task.text === text);
+	const completeTask = (id) => {
+		const taskIndex = tasks.findIndex((task) => task.id === id);
 		const newTasks = [...tasks];
-		newTasks[taskIndex].completed = true;
+		if (newTasks[taskIndex]) {
+			newTasks[taskIndex].completed = true;
+		}
 		saveTasks(newTasks);
 	};
 
-	const deleteTask = (text) => {
-		const taskIndex = tasks.findIndex((task) => task.text === text);
+	const deleteTask = (id) => {
+		const taskIndex = tasks.findIndex((task) => task.id === id);
 		const newTasks = [...tasks];
 		newTasks.splice(taskIndex, 1);
 		saveTasks(newTasks);

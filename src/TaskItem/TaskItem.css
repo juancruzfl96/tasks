@@ -1,49 +1,72 @@
 .TaskItem {
-  background-color: #FAFAFA;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+	background-color: #fafafa;
+	width: 75vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 24px;
+	/* padding: 0 10px; */
+	box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
 }
 
 .TaskItem-p {
-  margin: 24px 0 24px 24px;
-  width: calc(100% - 120px);
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
+	font-size: 18px;
+	font-weight: 400;
+	background-color: transparent;
+	max-width: 90%;
 }
+
 .TaskItem-p--complete {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .Icon {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 48px;
-  width: 48px;
-  font-size: 24px;
-  font-weight: bold;
-  /* background-color: #CCC; */
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 48px;
+	width: 48px;
+	font-size: 24px;
 }
 
 .Icon-check {
-  position: absolute;
-  left: 12px;
+	background-color: transparent;
+	padding-right: 15px;
 }
+
+.check {
+	background-color: transparent;
+}
+
+.Icon-check:hover {
+	color: #4caf50;
+}
+
 .Icon-check--active {
-  color: #4caf50;
+	color: #4caf50;
 }
 
 .Icon-delete {
-  position: absolute;
-  top: -24px;
-  right: 0;
+	background-color: transparent;
 }
 .Icon-delete:hover {
-  color: red;
+	color: red;
+}
+
+@media (max-width: 980px) {
+	.Icon {
+		font-size: 20px;
+	}
+
+	.TaskItem-p {
+		font-size: 15px;
+		max-width: 65%;
+	}
+}
+
+@media (max-width: 425px) {
+	.TaskItem-p {
+		max-width: 50%;
+	}
 }

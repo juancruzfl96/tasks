@@ -1,0 +1,40 @@
+.Footer {
+	color: black;
+	position: fixed;
+	bottom: 10px;
+	background-color: transparent;
+}
+
+h3 {
+	background-color: transparent;
+	margin-bottom: 5px;
+}
+
+a {
+	background-color: transparent;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+	background-color: transparent;
+}
+
+.icon {
+	background-color: transparent;
+	font-size: 40px;
+	color: black;
+}
+
+.icon:hover {
+	color: #5e5e5e;
+}
+
+@media (max-width: 425px) {
+	h3 {
+		font-size: 15px;
+	}
+	.icon {
+		font-size: 35px;
+	}
+}

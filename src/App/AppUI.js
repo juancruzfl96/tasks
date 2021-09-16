@@ -7,6 +7,7 @@ import TaskItem from '../TaskItem';
 import CreateTaskButton from '../CreateTaskButton';
 import Modal from '../Modal';
 import TaskForm from '../TaskForm';
+import Footer from '../Footer';
 import './App.css';
 
 function AppUI() {
@@ -26,25 +27,31 @@ function AppUI() {
 			<TaskSearch />
 			<TaskList>
 				{error && <p>ERROR</p>}
-				{loading && <p className='Loading'>LOADING</p>}
+				{loading && (
+					<div className='load'>
+						<div className='loading'></div>
+					</div>
+				)}
 				{!loading && !searchedTasks.length && <p>WRITE YOUR FIRST TASK</p>}
-				{searchedTasks.map((task) => (
+				{searchedTasks.map((task, index) => (
 					<TaskItem
-						key={task.text}
+						id={index}
+						key={index}
 						text={task.text}
 						completed={task.completed}
-						onComplete={() => completeTask(task.text)}
-						onDelete={() => deleteTask(task.text)}
+						onComplete={() => completeTask(task.id)}
+						onDelete={() => deleteTask(task.id)}
 					/>
 				))}
 			</TaskList>
-
 			{!!openModal && (
 				<Modal>
 					<TaskForm />
 				</Modal>
 			)}
+
 			<CreateTaskButton setOpenModal={setOpenModal} />
+			<Footer />
 		</React.Fragment>
 	);
 }

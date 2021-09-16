@@ -1,5 +1,18 @@
 ul {
-	margin: 0;
 	padding: 0 0 56px 0;
 	list-style: none;
+}
+
+.taskList {
+	border-radius: 5px;
+	overflow-y: scroll;
+}
+
+.taskList::-webkit-scrollbar {
+	width: 5px;
+}
+
+.taskList::-webkit-scrollbar-thumb {
+	background-color: #b9b9b9;
+	border-radius: 10px;
 }

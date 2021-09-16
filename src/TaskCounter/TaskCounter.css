@@ -1,6 +1,13 @@
 .TaskCounter {
-  font-size: 24px;
-  text-align: center;
-  margin: 0;
-  padding: 48px;
+	font-size: 24px;
+	text-align: center;
+	margin: 0;
+	padding: 48px;
+	border-radius: 5px 5px 0 0;
+}
+
+@media (max-width: 425px) {
+	.TaskCounter {
+		font-size: 20px;
+	}
 }

@@ -1,33 +1,98 @@
+* {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 .Form {
 	height: 70%;
 	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgb(34, 193, 195);
+	background: linear-gradient(
+		96deg,
+		rgba(34, 193, 195, 1) 0%,
+		rgba(253, 187, 45, 1) 100%
+	);
 }
 
 textarea {
-	width: 40vw;
+	margin-top: 30px;
 	height: 60%;
-	font-size: 15px;
+	width: 30%;
+	font-size: 20px;
 	color: black;
+	border: none;
+	box-shadow: 0px 0px 51px 5px rgba(92, 90, 90, 0.69);
+	-webkit-box-shadow: 0px 0px 51px 5px rgba(92, 90, 90, 0.69);
+	-moz-box-shadow: 0px 0px 51px 5px rgba(92, 90, 90, 0.69);
+	border-radius: 4px;
+	font-weight: 600;
+	outline: none;
 }
 
 .Button {
-	margin-top: 15px;
+	margin-top: 70px;
+	height: 10%;
+	width: 30%;
 	display: flex;
 	justify-content: space-around;
-	height: 10%;
+	background: transparent;
 }
 
 button {
-	width: 125px;
+	width: 100px;
 	font-size: 20px;
+	font-weight: 500;
+	border-radius: 10px;
+	border: none;
 }
 
 .Cancel:hover {
-	background-color: #ff0e0e;
+	background-color: red;
+	border-radius: 10px;
+	font-weight: 700;
+	color: white;
 	border: none;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
 .Add:hover {
-	background-color: #0eff0f;
+	background-color: #2ac500;
+	border-radius: 10px;
+	color: white;
+	font-weight: 700;
 	border: none;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 1024px) {
+	textarea {
+		width: 50%;
+	}
+	.Button {
+		width: 40%;
+	}
+}
+
+@media (max-width: 425px) {
+	textarea {
+		width: 70%;
+	}
+	.Button {
+		width: 60%;
+		margin-bottom: 10px;
+	}
+	button {
+		width: 70px;
+		font-size: 18px;
+		height: 40px;
+		border-radius: 5px;
+	}
 }
