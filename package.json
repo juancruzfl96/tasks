@@ -44,5 +44,6 @@
 	},
 	"devDependencies": {
 		"gh-pages": "^3.2.3"
-	}
+	},
+	"homepage": "https://tasks-iym4j5wfw-tasks-project.vercel.app/"
 }
