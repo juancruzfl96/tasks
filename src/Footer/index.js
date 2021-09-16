@@ -10,10 +10,14 @@ function Footer() {
 			<div className='links'>
 				<a
 					target='_blank'
+					rel='noreferrer'
 					href='https://www.linkedin.com/in/juan-cruz-fernandez-lago-426373198/'>
 					<FontAwesomeIcon className='linkedin icon' icon={faLinkedin} />
 				</a>
-				<a target='_blank' href='https://github.com/juancruzfl96'>
+				<a
+					target='_blank'
+					rel='noreferrer'
+					href='https://github.com/juancruzfl96'>
 					<FontAwesomeIcon className='github icon' icon={faGithub} />
 				</a>
 			</div>
